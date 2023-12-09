@@ -1,8 +1,14 @@
-def generate_squares(num):
-    squares_dict = {}
-    for number in range(1, num+1):
-        squares_dict[number] = number ** 2
-    print(squares_dict)
-    return squares_dict
+def math_quiz():
+    num_1 = input("Enter num1: ")
+    num_2 = input("Enter num2: ")
+    flag = True
+    while flag:
+        answer = input(f'What is {num_1} + {num_2}?: ')
+        if answer != num_1 + num_2:
+            print('Wrong answer, try again!')
+        else:
+            flag = False
+            print('Correct!')
+        return
 
-generate_squares(5)
+math_quiz()
