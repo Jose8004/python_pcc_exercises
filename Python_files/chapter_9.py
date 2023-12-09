@@ -85,4 +85,15 @@ check_stock(product_name): Returns the quantity of the specified product.
 """
 
 class StoreInventory:
-    def __init__
+    def __init__(self, store_name):
+        self.store_name = store_name
+        self.inventory = {}
+    
+    def add_product(self, product_name, quantity):
+        self.inventory[product_name] = quantity
+    
+    def remove_product(self, product_name):
+        del self.inventory[product_name]
+    
+    def check_stock(self, product_name):
+        return self.inventory[product_name]
