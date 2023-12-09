@@ -1,14 +1,9 @@
-def math_quiz():
-    num_1 = input("Enter num1: ")
-    num_2 = input("Enter num2: ")
-    flag = True
-    while flag:
-        answer = input(f'What is {num_1} + {num_2}?: ')
-        if answer != num_1 + num_2:
-            print('Wrong answer, try again!')
-        else:
-            flag = False
-            print('Correct!')
-        return
+def merge_and_sort_lists(list1, list2):
+    x = list1.extend(list2)
+    return sorted(x)
 
-math_quiz()
+print(merge_and_sort_lists([1, 2, 3], [4, 5, 9]))
+
+#            string = f"{self.registered_vehicles.keys().title()}: {self.registered_vehicles.values().title()}-{self.registered_vehicles.values().title()}"
+#            list.append(string)
+#            return string
