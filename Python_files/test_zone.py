@@ -1,15 +1,8 @@
-import random
+def generate_squares(num):
+    squares_dict = {}
+    for number in range(1, num+1):
+        squares_dict[number] = number ** 2
+    print(squares_dict)
+    return squares_dict
 
-def generate_expressions(num):
-    expressions = []
-    rand_int = random.randint(1, 10)
-    operators = ["+", "-", "*", "/"]
-    while True:
-        for op in operators:
-            expressions.append(f"{num} {op} {rand_int}")
-        if op == "/":
-            break
-    print(expressions)
-    return expressions
-
-generate_expressions(9)
+generate_squares(5)

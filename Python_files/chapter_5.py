@@ -34,20 +34,19 @@ if __name__ == '__main__':
 """
 
 def classify_grades(grades):
-    if grades:
-        for i in range(len(grades)):
-            if isinstance(grades[i], str):
-                grade = 0
-            else:
-                grade = grades[i]
-            if grade < 60:
-                grades[i] = "Fail"
-            elif 60 <= grade <= 69:
-                grades[i] = "Pass"
-            elif 70 <= grade <= 89:
-                grades[i] = "Good"
-            elif 90 <= grade <= 100:
-                grades[i] = "Excellent"
+    for i in range(len(grades)):
+        if isinstance(grades[i], str):
+            grade = 0
+        else:
+            grade = grades[i]
+        if grade < 60:
+            grades[i] = "Fail"
+        elif 60 <= grade <= 69:
+            grades[i] = "Pass"
+        elif 70 <= grade <= 89:
+            grades[i] = "Good"
+        elif 90 <= grade <= 100:
+            grades[i] = "Excellent"
     return grades
 
 """
