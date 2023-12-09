@@ -83,7 +83,7 @@ if __name__ == '__main__':
 """
 
 def is_username_available(current_users, new_users):
-    bools_list = ["True" if user not in current_users else "False" for user in new_users]
+    bools_list = ["True" if user.lower() not in current_users.lower() else "False" for user.lower() in new_users.lower()]
     
     """
     This is the expanded version
