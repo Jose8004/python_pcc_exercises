@@ -29,7 +29,6 @@ class VehicleRegistry:
         self.registered_vehicles = {}
     
     def register_vehicle(self, license_plate, owner_name, vehicle_type):
-        #tuplex = ((owner_name, vehicle_type))
         self.registered_vehicles[license_plate] = (owner_name, vehicle_type)
     
     def deregister_vehicle(self, license_plate):
