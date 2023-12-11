@@ -32,6 +32,13 @@ def get_nested_value(nested_dict, key_list):
                 for i in range(len(key_list)):
                     return nested_dict[key_list[i]]
 
+"""def get_nested_value(nested_dict, key_list):
+    if len(key_list) == 1:
+        return nested_dict.get(key_list[0])
+    else:
+        return get_nested_value(nested_dict.get(key_list[0], {}), key_list[1:])"""
+
+
 """
 Practice Question 2: Dictionary of Lists Append
 Task:
@@ -43,4 +50,9 @@ key. If the key does not exist in the dictionary,
 add a new key with the value in a list.
 """
 
-def append_to_dict_list
+def append_to_dict_list(dict1, key1, val1):
+    if key1 in dict1.keys():
+        dict1[key1].append(val1)
+    else:
+        dict1[key1] = [val1]
+    return dict1 

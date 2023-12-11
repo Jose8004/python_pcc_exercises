@@ -86,3 +86,19 @@ def transform_quote(quote):
     d = f"{c}{len(c)}"
     e = f"{c}21"
     return e
+
+"""
+1. Dynamic Greeting (Combines 2-1, 2-3, 2-6)
+Task: Write a Python script that assigns a person’s name 
+to a variable and a greeting template to another variable. 
+The greeting should be a string that expects a name to be 
+inserted (use string formatting or concatenation). Initially, 
+display the greeting for the first name. Then, update the name 
+variable to a different name and display the greeting again with 
+the new name.
+Key Concepts: Variable assignment, string manipulation, string 
+formatting.
+"""
+
+def dynamic_greeting(name):
+    return f"Hello {name}, welcome to Python!"
