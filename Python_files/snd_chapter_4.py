@@ -20,3 +20,19 @@ def replace_elements(list, target, replacement):
         if list[i] == target:
             list[i] = replacement
     return list
+
+"""
+Practice Question 1: Merging Sorted Lists
+Task:
+Write a function merge_sorted_lists that takes 
+two lists of integers, both sorted in ascending 
+order. Merge these two lists into a single list, 
+which should also be sorted in ascending order. 
+Return the merged list.
+"""
+
+def merge_sorted_lists(list_1, list_2):
+    list_1 = sorted(list_1)
+    list_2 = sorted(list_2)
+    single_list = list_1 + list_2
+    return sorted(single_list)

@@ -60,3 +60,34 @@ if __name__ == '__main__':
 def negative_to_zero(list_1):
     list_1 = [num if num > 0 else 0 for num in list_1]
     return list_1
+
+"""
+Practice Question 3: Slicing and Dicing Lists
+Task:
+Write a function slice_lists that takes a list 
+and returns a tuple containing three lists: the 
+first 3 elements, 3 elements from the middle, 
+and the last 3 elements of the list. If the list 
+has fewer than 9 elements, return the entire list 
+as the only element of the tuple.
+"""
+
+def slice_lists(list_x):
+    tuple_x = ()
+    to_list = list(tuple_x)
+    if len(list_x) == 0:
+        tuple_x = ([],)
+        return tuple_x
+    if len(list_x) < 9:
+        to_list.append(list_x)
+        to_tuple = tuple(to_list)
+        return to_tuple
+    else:
+        middle = ((len(list_x) // 3))
+        middle_2 = middle + 3
+        last = (len(list_x) - 3)
+        to_list.append(list_x[:3])
+        to_list.append(list_x[middle:middle_2])
+        to_list.append(list_x[last:])
+        to_tuple = tuple(to_list)
+        return to_tuple

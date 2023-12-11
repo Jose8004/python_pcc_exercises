@@ -1,5 +1,5 @@
 import unittest
-from chapter_4 import filter_and_square, negative_to_zero 
+from chapter_4 import filter_and_square, negative_to_zero, slice_lists
  
 class TestFilterAndSquare(unittest.TestCase):
     def test_filter_and_square(self):
@@ -23,6 +23,23 @@ class TestNegativeToZero(unittest.TestCase):
  
     def test_all_negatives(self):
         self.assertEqual(negative_to_zero([-1, -2, -3]), [0, 0, 0])
+ 
+if __name__ == '__main__':
+    unittest.main()
+
+class TestSliceLists(unittest.TestCase):
+    def test_slice_lists_long_list(self):
+        long_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        expected = ([1, 2, 3], [5, 6, 7], [10, 11, 12])
+        self.assertEqual(slice_lists(long_list), expected)
+ 
+    def test_short_list(self):
+        short_list = [1, 2, 3, 4]
+        expected = ([1, 2, 3, 4],)
+        self.assertEqual(slice_lists(short_list), expected)
+ 
+    def test_empty_list(self):
+        self.assertEqual(slice_lists([]), ([],))
  
 if __name__ == '__main__':
     unittest.main()

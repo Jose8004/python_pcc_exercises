@@ -1,3 +1,5 @@
+import random
+
 """
 3. Whitespace Analyzer (Expands on 2-7)
 Task: Write a Python script where you assign a
@@ -102,3 +104,27 @@ formatting.
 
 def dynamic_greeting(name):
     return f"Hello {name}, welcome to Python!"
+
+"""
+4. Mathematical Expressions Generator (Builds on 2-9)
+Task: Create a Python program that generates and prints 
+four unique arithmetic expressions (using addition, 
+subtraction, multiplication, division) that result in 
+a user-provided number. The expressions must use at least 
+two different numbers each (other than the target number) 
+and must be generated programmatically (not hard-coded). 
+Display the expressions and their results.
+Key Concepts: Arithmetic operations, loops, conditional 
+logic, input handling.
+"""
+
+def generate_expressions(num):
+    expressions = []
+    rand_int = random.randint(1, 10)
+    operators = ["+", "-", "*", "/"]
+    while True:
+        for op in operators:
+            expressions.append(f"{num} {op} {rand_int}")
+        if op == "/":
+            break
+    return expressions
