@@ -1,3 +1,5 @@
+import random
+
 """
 Practice Question 2: Password Change Request
 Task:
@@ -50,4 +52,24 @@ def age_verifier():
                 print('Invalid age. Please try again.')
                 flag += 1
                 continue
-    
+
+"""
+Practice Question 3: Interactive Number Guesser
+Task:
+Implement a function number_guesser that generates 
+a random number between 1 and 10 and asks the user 
+to guess the number. The user keeps guessing until 
+they guess the correct number.
+"""
+
+def number_guesser():
+    rand_num = random.randint(1, 10)
+    flag = True
+    while flag:
+        user_num = input("Guess the number: ")
+        if int(user_num) == rand_num:
+            flag = False
+            print(f'Correct! The number was {user_num}')
+        else:
+            print('Try again.')
+            continue

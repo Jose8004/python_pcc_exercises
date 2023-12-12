@@ -56,3 +56,25 @@ def append_to_dict_list(dict1, key1, val1):
     else:
         dict1[key1] = [val1]
     return dict1 
+
+"""
+Practice Question 1: Dictionary Key Reversal
+Task:
+Create a function reverse_dictionary that takes 
+a dictionary and returns a new dictionary where 
+the keys and values are swapped. 
+If the original 
+dictionary has duplicate values, only one of the 
+corresponding keys should be preserved in the 
+new dictionary.
+"""
+
+def reverse_dictionary(dict_x):
+    new_dict = {}
+    for key, value in dict_x.items():
+        if isinstance(value, dict):
+            new_dict[key] = reverse_dictionary(value)
+        else:
+            new_dict[value] = key
+    
+    return new_dict
