@@ -30,17 +30,20 @@ Otherwise, it’s ‘Weak’.
 
 def validate_password_strength(password):
 
-    case_checker = 0
+    has_upper = False
+    has_lower = False
+    is_digit = False
 
     if len(password) >= 8:
         for i in range(len(password)):
-            if password[i].isupper() and case_checker == 0:
-                case_checker += 1
-            if password[i].islower() and case_checker == 1:
-                case_checker += 1
-            if password[i].isdigit() and case_checker == 2:
-                case_checker += 1
-    if case_checker >= 3:
+            if password[i].isupper():
+                has_upper = True
+            if password[i].islower():
+                has_lower = True
+            if password[i].isdigit():
+                is_digit = True
+                
+    if has_upper and has_lower and is_digit:
         return 'Strong'
     else:
         return 'Weak'
