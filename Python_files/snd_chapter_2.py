@@ -86,8 +86,7 @@ def transform_quote(quote):
     b = list(a.replace(" ", "_"))
     c = "".join(list(b))
     d = f"{c}{len(c)}"
-    e = f"{c}21"
-    return e
+    return d
 
 """
 1. Dynamic Greeting (Combines 2-1, 2-3, 2-6)
