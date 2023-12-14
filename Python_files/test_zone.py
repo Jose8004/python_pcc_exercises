@@ -25,3 +25,4 @@ def validate_config(string):
     
         
 validate_config("id: 1\nname: Test\nvalue: 123\n")
+

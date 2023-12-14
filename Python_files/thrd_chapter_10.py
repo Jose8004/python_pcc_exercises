@@ -16,15 +16,16 @@ handled separately with a different error message.
 """
 
 def robust_file_reader(file_name):
-    path = Path(file_name)
+    
     try:
-        contents = path.read_text()
+        object = open(file_name, 'r')
+        content = object.read()
     except FileNotFoundError:
         return 'File not found error'
     except IOError:
         return 'IO error occurred'
-    
-    return contents
+
+    return content
 
 """
 Practice Question 2: Safe Number Converter
@@ -57,16 +58,31 @@ appropriate message for the type of exception raised.
 """
 
 def database_connection_simulator():
-    rand_num = random.randint(1, 2)
-    max_retries = 3
-    connect_error = 1
-    time_error = 2
+    choices = [ConnectionError, TimeoutError, None]
+    choice = random.choice(choices)
 
-    for i in range(max_retries):
-        if rand_num == 1:
-                raise ConnectionError
-        if rand_num == 2:
-                raise TimeoutError
-        time.sleep(1)
-    if rand_num
-    raise Exception()
+    for i in range(3):
+        try:
+            choice
+        except TypeError:
+            continue
+        except ConnectionError:
+            continue
+        except TimeoutError:
+            continue
+        time.sleep(0)
+ 
+    if choice == ConnectionError:
+        try:
+            raise ConnectionError('Failed to connect: ConnectionError')
+        except ConnectionError:
+            return 'Failed to connect: ConnectionError'
+            
+    if choice == TimeoutError:
+        try:
+            raise TimeoutError('Failed to connect: TimeoutError')
+        except TimeoutError:
+            return 'Failed to connect: TimeoutError'
+    else:
+        return 'Connected successfully'
+    
