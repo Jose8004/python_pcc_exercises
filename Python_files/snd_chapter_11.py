@@ -1,5 +1,18 @@
 import string
 
+"""
+Practice Question 4: Password Validator
+Task:
+Create a function validate_password that checks 
+if a password is strong. A strong password has 
+at least 8 characters, contains both uppercase 
+and lowercase letters, at least one digit, and 
+at least one special character (e.g., !@#$%^&*). 
+The function should return True if the password 
+is strong, and False otherwise. Store this function 
+in a module called password_validator.py.
+"""
+
 def validate_password(password):
     
     uppercase = False
@@ -34,5 +47,3 @@ def validate_password(password):
         return False
 
 
-print(validate_password('A1b2C3d4!'))
-            

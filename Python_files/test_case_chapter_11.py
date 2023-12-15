@@ -11,7 +11,7 @@ class Test_different_values(unittest.TestCase):
         assert convert_to_celsius(1000) == pytest.approx(537.78, 0.1)
         assert convert_to_celsius(140) == pytest.approx(60.00, 0.1)
     
-    def invalid_convertion(self):
+    def test_invalid_convertion(self):
         self.assertNotEqual(convert_to_celsius(140), 62)
  
 if __name__ == '__main__':
