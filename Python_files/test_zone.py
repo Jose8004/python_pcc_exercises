@@ -1,28 +1,18 @@
-from pathlib import Path
+import random
 
-def validate_config(string):
-    #lines = Path(file_name).read_text().splitlines()
-    words = string.split()
-    print(f"This is the words list: {words}")
-    key_checker = 0
-    for word in words:
-        print(f"This is a word: {word}")
-        
-        if word == 'id:':
-            key_checker += 1
-        elif word == 'name:':
-            key_checker += 1
-        elif word == 'value:':
-            key_checker += 1
+"""
+Practice Question 3: Prime Number Checker
+Task:
+Write a function is_prime that takes an integer 
+and returns True if the number is prime, and False 
+otherwise. Store the function in a module called 
+prime_checker.py.
+"""
 
-        print(f"This is the key count: {key_checker}")
-
-    if key_checker == 3:
-        return True
-    else:
-        return False
-        
-    
-        
-validate_config("id: 1\nname: Test\nvalue: 123\n")
-
+def is_prime(integer):
+    if integer > 1:
+        for i in range(3):
+            rand_num = random.randint(2, 100)
+            if integer != rand_num:
+                if integer 
+            
